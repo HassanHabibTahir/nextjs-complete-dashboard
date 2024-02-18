@@ -145,6 +145,7 @@ export async function fetchInvoicesPages(query: string) {
 }
 
 export async function fetchInvoiceById(id: string) {
+  // noStore();
   try {
     const data = await sql<InvoiceForm>`
       SELECT
@@ -229,3 +230,4 @@ export async function getUser(email: string) {
     throw new Error('Failed to fetch user.');
   }
 }
+
